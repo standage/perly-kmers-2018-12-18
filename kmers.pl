@@ -17,7 +17,8 @@ while (my $line = <STDIN>) {
     if ($sequence eq "") {
         next;
     }
-    for my $i (0 .. length($sequence) - $k + 1) {
+
+    for my $i (0 .. length($sequence) - $k) {
         my $kmer = substr($sequence, $i, $k);
         print("$kmer\n");
         $kmercount++;
