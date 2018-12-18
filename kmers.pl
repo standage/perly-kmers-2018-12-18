@@ -1,4 +1,4 @@
-#!/opt/local/bin/perl5.8
+#!/usr/bin/env perl
 # ------------------------------------------------------------------------------
 # This is where I'd put my copyright notice...IF I HAD ONE!
 # Daniel Standage 2017
@@ -16,7 +16,7 @@ while ($line = <STDIN>) {
     if ($sequence eq "") {
         next;
     }
-    for $i (0 .. length($sequence) - $k + 1) {
+    for $i (0 .. length($sequence) - $k) {
         $kmer = substr($sequence, $i, $k);
         print("$kmer\n");
         $kmercount++;
